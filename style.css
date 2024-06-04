@@ -1,0 +1,67 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+section {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25em;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  text-align: center;
+}
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  margin-top: 1em;
+}
+h3 {
+  border-bottom: 1px solid black;
+  padding-bottom: 0.25em;
+}
+p {
+  font-size: 1.25em;
+}
+
+article {
+  display: flex;
+  justify-content: center;
+}
+div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+#names {
+  width: 6em;
+}
+#occupations {
+  width: 10em;
+}
+#starting-prices {
+  width: 10em;
+}
+
+li {
+  text-align: center;
+  padding: 0.3em;
+}
+li:nth-child(odd) {
+  background-color: rgb(235, 235, 235);
+}
