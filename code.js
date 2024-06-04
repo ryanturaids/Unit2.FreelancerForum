@@ -5,21 +5,19 @@ const freelancers = [
   {name: 'Bob', price: 50, occupation: 'Teacher'},
   {name: 'Carol', price: 70, occupation: 'Programmer'}
 ];
-const avgArray = [30,50,70]
+const avgArray = freelancers.map(em => em.price);
 // random options
 const nameOptions = [
-  'John','Jane','Mike','Sarah','Tom','Emily','David','Anna','Chris','Kate','Jack','Laura','James','Emma','Mark'
+  'John','Jane','Mike','Sarah','Tom','Emily','David','Anna','Chris','Kate','Jack','Laura','James','Emma','Mark','Liam','Noah','Philip','Oliver','William','Mary','Frederick','Elijah','Jennifer','Lucas','Henry','Susan','Benjamin','Elizabeth','Daniel'
 ];
 const occupationOptions = [
-  'Writer','Teacher','Programmer','Web-Developer','Photographer','Videographer','Translator','Analyst','Marketer','Illustrator','Proofreader'
+  'Writer','Teacher','Programmer','Web Developer','Photographer','Videographer','Translator','Analyst','Marketer','Illustrator','Proofreader','Accountant','Recruiter','Virtual Assistant','Bookkeeper','Graphic Designer','Copywriter','Social Media Specialist','Video Editor','Project Manager','Community Manager','Marketer','Communications Specialist','Editor','Technical Writer','PR Specialist','HR Advisor','Financial Consultant','Social Media Manager','Secret Shopper'
 ];
 // set maximum number of freelancers to appear on page
 const maxFreelancers = 15;
-
 // ----WEBPAGE
 // page initalization
 render();
-
 // time interval
 let counter = 0;
 const addFreelancerInterval = setInterval(() => {
@@ -29,8 +27,7 @@ const addFreelancerInterval = setInterval(() => {
   if (counter >= (maxFreelancers - 3)) {
     clearInterval(addFreelancerInterval);
   }
-}, 3000);
-
+}, 2500);
 // ----FUNCTIONS
 // render onto page
 function render() {
@@ -62,7 +59,6 @@ function addFreelancer() {
 function calcAvg(arr) {
   return (arr.reduce((acc,cur) => acc + cur, 0)) / arr.length;
 };
-
 // update the average text
 function updateAvg(arr) {
   return `The average starting price is $${Math.round(calcAvg(arr)*100)/100}`;
